@@ -294,10 +294,10 @@ pub(crate) fn tick_controls(mut query: Query<&mut PhysicsState>) {
             _ => {}
         };
         match move_direction {
-            WalkDirection::Right | WalkDirection::ForwardRight | WalkDirection::BackwardRight => {
+            WalkDirection::Left | WalkDirection::ForwardLeft | WalkDirection::BackwardLeft => {
                 left_impulse += 1.;
             }
-            WalkDirection::Left | WalkDirection::ForwardLeft | WalkDirection::BackwardLeft => {
+            WalkDirection::Right | WalkDirection::ForwardRight | WalkDirection::BackwardRight => {
                 left_impulse -= 1.;
             }
             _ => {}
